@@ -23,12 +23,12 @@ export default function Portfolio() {
 
   const projects = [
     {
-      title: "AI-Powered EdTech Platform",
+      title: "AI-Powered Tutorial Platform",
       description: "An AI-driven learning platform with GPT-generated content, Firebase Auth, Spring Boot backend, PostgreSQL database, and a responsive React + Tailwind UI. Features include dynamic Table of Contents, tab-based content layout, and analytics APIs.",
       tech: ["React", "Spring Boot", "PostgreSQL", "Firebase", "Gemini"],
       gradient: "from-purple-600 via-pink-600 to-blue-600",
       icon: <Sparkles className="w-6 h-6" />,
-      WebSiteLink:""
+      WebSiteLink:"https://learn-front-end.onrender.com"
     },
     {
       title: "SocialPrachar Webpage",
@@ -49,17 +49,20 @@ export default function Portfolio() {
   ];
 
   const skills = [
-    { name: "Node.js / Express", level: 90, icon: <Code className="w-5 h-5" /> },
+    { name: "Java", level: 90, icon: <Code className="w-5 h-5" /> },
     { name: "React.js / Redux", level: 95, icon: <Code className="w-5 h-5" /> },
-    { name: "MongoDB ", level: 75, icon: <Database className="w-5 h-5" /> },
+    // { name: "MongoDB ", level: 75, icon: <Database className="w-5 h-5" /> },
     { name: "PostgreSQL", level: 85, icon: <Database className="w-5 h-5" /> },
     { name: "MySQL", level: 85, icon: <Database className="w-5 h-5" /> },
     { name: "Spring Boot", level: 80, icon: <Code className="w-5 h-5" /> },
     { name: "Firebase (Auth)", level: 85, icon: <Zap className="w-5 h-5" /> },
     { name: "REST APIs", level: 90, icon: <Globe className="w-5 h-5" /> },
-    { name: "Tailwind CSS", level: 95, icon: <Star className="w-5 h-5" /> },
+    { name: "Bootstrap", level: 95, icon: <Star className="w-5 h-5" /> },
+    { name: "HTML and CSS", level: 95, icon: <Star className="w-5 h-5" /> },
+    { name: "GIT", level: 75, icon: <Star className="w-5 h-5" /> },
+    { name: "Tailwind CSS", level: 75, icon: <Star className="w-5 h-5" /> },
     { name: "Microservices", level: 75, icon: <Code className="w-5 h-5" /> },
-    { name: "OpenAI/Gemini API", level: 80, icon: <Sparkles className="w-5 h-5" /> }
+    // { name: "OpenAI/Gemini API", level: 80, icon: <Sparkles className="w-5 h-5" /> }
   ];
 
   return (
@@ -99,7 +102,7 @@ export default function Portfolio() {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-semibold">
                 Full Stack Developer
-              </span> crafting the future with Node.js, React, MongoDB, Spring Boot, Firebase & AI
+              </span> crafting the future with Java, React, Postgres, Spring Boot, Firebase & AI
             </p>
             
             <div className="flex justify-center space-x-6 mb-12">
@@ -140,7 +143,7 @@ export default function Portfolio() {
                 >
                   <div className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-0 group-hover:opacity-10 rounded-3xl transition-opacity duration-500`}></div>
                   
-                  <div className="relative z-10">
+                  <div className="relative z-10" onClick={()=>handleWebsiteLink(project.WebSiteLink)} >
                     <div className="flex items-center mb-6">
                       <div className={`p-3 rounded-xl bg-gradient-to-r ${project.gradient} text-white mr-4`}>
                         {project.icon}
@@ -220,7 +223,8 @@ export default function Portfolio() {
             </h2>
             
             <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-              Ready to turn your ideas into reality? Let's connect and create something extraordinary together.
+             Passionate about building scalable, real-world solutions using AI and full-stack technologies.
+              {/* Ready to turn your ideas into reality? Let's connect and create something extraordinary together. */}
             </p>
             
             <div className="space-y-4">
